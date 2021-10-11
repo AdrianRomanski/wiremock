@@ -1,0 +1,15 @@
+[
+  {
+    "creditCardNumber": "1111-1111-1111",
+    "creditCardExpiry": "2020-09-03",
+    "amount": 100.5
+  },
+
+  {
+    "paymentId": "1111-1111-1111",
+    "paymentResponseStatus": "SUCCESS"
+  },
+  {
+    "blacklisted": false
+  }
+]
