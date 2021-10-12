@@ -1,4 +1,4 @@
-package com.example.wiremock.payment;
+package com.example.paymoney.payment;
 
 public class PaymentUpdateResponse {
 

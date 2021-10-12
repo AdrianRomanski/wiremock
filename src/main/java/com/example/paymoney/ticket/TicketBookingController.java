@@ -1,6 +1,7 @@
-package com.example.wiremock.ticket;
+package com.example.paymoney.ticket;
 
-import com.example.wiremock.payment.PaymentUpdateResponse;
+
+import com.example.paymoney.payment.PaymentUpdateResponse;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 

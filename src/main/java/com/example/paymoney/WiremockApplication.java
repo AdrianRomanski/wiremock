@@ -1,4 +1,4 @@
-package com.example.wiremock;
+package com.example.paymoney;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

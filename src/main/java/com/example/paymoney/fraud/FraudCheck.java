@@ -1,4 +1,4 @@
-package com.example.wiremock.fraud;
+package com.example.paymoney.fraud;
 
 public class FraudCheck {
     private final boolean blacklisted;

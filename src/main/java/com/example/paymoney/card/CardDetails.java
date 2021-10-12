@@ -1,4 +1,4 @@
-package com.example.wiremock.card;
+package com.example.paymoney.card;
 
 import java.time.LocalDate;
 

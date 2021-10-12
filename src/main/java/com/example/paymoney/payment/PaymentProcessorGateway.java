@@ -1,6 +1,7 @@
-package com.example.wiremock.payment;
+package com.example.paymoney.payment;
 
-import com.example.wiremock.fraud.FraudCheckResponse;
+
+import com.example.paymoney.fraud.FraudCheckResponse;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;

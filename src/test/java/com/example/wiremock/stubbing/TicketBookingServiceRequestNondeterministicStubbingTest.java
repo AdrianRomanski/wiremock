@@ -1,9 +1,9 @@
 package com.example.wiremock.stubbing;
 
-import com.example.wiremock.card.CardDetails;
-import com.example.wiremock.payment.PaymentProcessorGateway;
-import com.example.wiremock.ticket.TicketBookingPaymentRequest;
-import com.example.wiremock.ticket.TicketBookingService;
+import com.example.paymoney.card.CardDetails;
+import com.example.paymoney.payment.PaymentProcessorGateway;
+import com.example.paymoney.ticket.TicketBookingPaymentRequest;
+import com.example.paymoney.ticket.TicketBookingService;
 import com.github.tomakehurst.wiremock.WireMockServer;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
@@ -13,7 +13,7 @@ import java.time.LocalDate;
 import java.util.Random;
 import java.util.stream.IntStream;
 
-import static com.example.wiremock.ticket.TicketBookingResponse.BookingResponseStatus.SUCCESS;
+import static com.example.paymoney.ticket.TicketBookingResponse.BookingResponseStatus.SUCCESS;
 import static com.github.tomakehurst.wiremock.client.WireMock.*;
 import static java.util.stream.Collectors.*;
 import static org.assertj.core.api.Assertions.*;

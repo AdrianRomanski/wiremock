@@ -1,9 +1,10 @@
 package com.example.wiremock.stubbing;
 
-import com.example.wiremock.card.CardDetails;
-import com.example.wiremock.payment.PaymentProcessorGateway;
-import com.example.wiremock.ticket.TicketBookingPaymentRequest;
-import com.example.wiremock.ticket.TicketBookingService;
+
+import com.example.paymoney.card.CardDetails;
+import com.example.paymoney.payment.PaymentProcessorGateway;
+import com.example.paymoney.ticket.TicketBookingPaymentRequest;
+import com.example.paymoney.ticket.TicketBookingService;
 import com.github.tomakehurst.wiremock.WireMockServer;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;

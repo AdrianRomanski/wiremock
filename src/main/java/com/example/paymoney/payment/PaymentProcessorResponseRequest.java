@@ -1,13 +1,13 @@
-package com.example.wiremock.fraud;
+package com.example.paymoney.payment;
 
 import java.time.LocalDate;
 
-public class FraudCheckRequest {
+public class PaymentProcessorResponseRequest {
     private final String cardNumber;
     private final LocalDate cardExpiryDate;
     private final Double amount;
 
-    public FraudCheckRequest(String cardNumber, LocalDate cardExpiryDate, Double amount) {
+    public PaymentProcessorResponseRequest(String cardNumber, LocalDate cardExpiryDate, Double amount) {
 
         this.cardNumber = cardNumber;
         this.cardExpiryDate = cardExpiryDate;

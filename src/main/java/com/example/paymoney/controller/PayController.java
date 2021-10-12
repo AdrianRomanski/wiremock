@@ -1,18 +1,18 @@
 package com.example.paymoney.controller;
-
-import com.example.wiremock.fraud.FraudCheck;
-import com.example.wiremock.payment.PaymentProcessorResponse;
-import com.example.wiremock.payment.PaymentProcessorResponseRequest;
+import com.example.paymoney.fraud.FraudCheck;
+import com.example.paymoney.payment.PaymentProcessorResponse;
+import com.example.paymoney.payment.PaymentProcessorResponseRequest;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.UUID;
 
-import static com.example.wiremock.payment.PaymentProcessorResponse.PaymentResponseStatus.FAILED;
-import static com.example.wiremock.payment.PaymentProcessorResponse.PaymentResponseStatus.SUCCESS;
+import static com.example.paymoney.payment.PaymentProcessorResponse.PaymentResponseStatus.FAILED;
+import static com.example.paymoney.payment.PaymentProcessorResponse.PaymentResponseStatus.SUCCESS;
+
 
 @RestController
+@RequestMapping("/api")
 public class PayController {
-
 
     @PostMapping("/update")
     void updatePayment(@RequestBody String bookingId) {
@@ -30,6 +30,11 @@ public class PayController {
                     FAILED);
         }
         return response;
+    }
+
+    @GetMapping("/test")
+    public FraudCheck test() {
+        return new FraudCheck(true);
     }
 
     @GetMapping("/fraudCheck/{cardNumber}")

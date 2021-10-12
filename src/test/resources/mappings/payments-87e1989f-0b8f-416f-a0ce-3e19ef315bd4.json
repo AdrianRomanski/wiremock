@@ -1,0 +1,26 @@
+{
+  "id" : "87e1989f-0b8f-416f-a0ce-3e19ef315bd4",
+  "name" : "payments",
+  "request" : {
+    "url" : "/payments",
+    "method" : "POST",
+    "bodyPatterns" : [ {
+      "equalToJson" : "{\"cardNumber\":\"1111-1111-1111-1111\",\"cardExpiryDate\":\"2020-08-03\",\"amount\":200.0}",
+      "ignoreArrayOrder" : true,
+      "ignoreExtraElements" : true
+    } ]
+  },
+  "response" : {
+    "status" : 404,
+    "body" : "{\"timestamp\":\"2021-10-12T09:00:33.011+00:00\",\"status\":404,\"error\":\"Not Found\",\"path\":\"/payments\"}",
+    "headers" : {
+      "Vary" : [ "Origin", "Access-Control-Request-Method", "Access-Control-Request-Headers" ],
+      "Content-Type" : "application/json",
+      "Date" : "Tue, 12 Oct 2021 09:00:33 GMT",
+      "Keep-Alive" : "timeout=60"
+    }
+  },
+  "uuid" : "87e1989f-0b8f-416f-a0ce-3e19ef315bd4",
+  "persistent" : true,
+  "insertionIndex" : 2
+}

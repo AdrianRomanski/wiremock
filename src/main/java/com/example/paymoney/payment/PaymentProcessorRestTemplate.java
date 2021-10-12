@@ -1,4 +1,4 @@
-package com.example.wiremock.payment;
+package com.example.paymoney.payment;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;

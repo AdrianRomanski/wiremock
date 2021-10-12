@@ -1,4 +1,4 @@
-package com.example.wiremock.fraud;
+package com.example.paymoney.fraud;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;

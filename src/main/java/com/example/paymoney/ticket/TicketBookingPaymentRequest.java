@@ -1,6 +1,6 @@
-package com.example.wiremock.ticket;
+package com.example.paymoney.ticket;
 
-import com.example.wiremock.card.CardDetails;
+import com.example.paymoney.card.CardDetails;
 
 public class TicketBookingPaymentRequest {
     private final String bookingId;

@@ -1,10 +1,11 @@
-package com.example.wiremock.ticket;
+package com.example.paymoney.ticket;
 
-import com.example.wiremock.card.CardDetails;
-import com.example.wiremock.fraud.FraudCheckResponse;
-import com.example.wiremock.payment.PaymentProcessorGateway;
-import com.example.wiremock.payment.PaymentProcessorResponse;
-import com.example.wiremock.payment.PaymentUpdateResponse;
+
+import com.example.paymoney.card.CardDetails;
+import com.example.paymoney.fraud.FraudCheckResponse;
+import com.example.paymoney.payment.PaymentProcessorGateway;
+import com.example.paymoney.payment.PaymentProcessorResponse;
+import com.example.paymoney.payment.PaymentUpdateResponse;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

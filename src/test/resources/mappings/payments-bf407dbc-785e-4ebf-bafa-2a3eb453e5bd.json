@@ -1,0 +1,20 @@
+{
+  "id" : "bf407dbc-785e-4ebf-bafa-2a3eb453e5bd",
+  "name" : "payments",
+  "request" : {
+    "url" : "/payments",
+    "method" : "POST",
+    "bodyPatterns" : [ {
+      "equalToJson" : "{\"cardNumber\":\"1111-1111-1111-1111\",\"cardExpiryDate\":\"2020-08-03\",\"amount\":200.0}",
+      "ignoreArrayOrder" : true,
+      "ignoreExtraElements" : true
+    } ]
+  },
+  "response" : {
+    "status" : 500,
+    "base64Body" : "TmV0d29yayBmYWlsdXJlIHRyeWluZyB0byBtYWtlIGEgcHJveGllZCByZXF1ZXN0IGZyb20gV2lyZU1vY2sgdG8gaHR0cDovL2xvY2FsaG9zdDo4MDgyL3BheW1lbnRzDQpDb25uZWN0IHRvIGxvY2FsaG9zdDo4MDgyIFtsb2NhbGhvc3QvMTI3LjAuMC4xLCBsb2NhbGhvc3QvMDowOjA6MDowOjA6MDoxXSBmYWlsZWQ6IENvbm5lY3Rpb24gcmVmdXNlZA=="
+  },
+  "uuid" : "bf407dbc-785e-4ebf-bafa-2a3eb453e5bd",
+  "persistent" : true,
+  "insertionIndex" : 1
+}

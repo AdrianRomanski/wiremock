@@ -1,7 +1,8 @@
 package com.example.wiremock.recording;
 
-import com.example.wiremock.payment.PaymentProcessorGateway;
-import com.example.wiremock.ticket.TicketBookingService;
+
+import com.example.paymoney.payment.PaymentProcessorGateway;
+import com.example.paymoney.ticket.TicketBookingService;
 import com.github.tomakehurst.wiremock.WireMockServer;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
@@ -21,7 +22,7 @@ public class TicketBookingServiceRequestStubbingTest {
         wireMockServer = new WireMockServer();
         wireMockServer.start();
 
-        wireMockServer.startRecording("http://localhost:9090");
+        wireMockServer.startRecording("http://localhost:8082");
 
         PaymentProcessorGateway paymentProcessorGateway = new PaymentProcessorGateway();
         paymentProcessorGateway.initializeUrl("localhost", wireMockServer.port());
@@ -32,7 +33,7 @@ public class TicketBookingServiceRequestStubbingTest {
     @Test
     void testCase1() {
 
-        stubFor(get((urlEqualTo("localhost:9090/api/mytest"))).willReturn(ok()));
+        stubFor(get((urlEqualTo("localhost:8082/api/mytest"))).willReturn(ok()));
     }
 
 
