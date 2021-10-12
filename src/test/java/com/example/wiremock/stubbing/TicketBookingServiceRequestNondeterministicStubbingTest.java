@@ -3,18 +3,14 @@ package com.example.wiremock.stubbing;
 import com.example.wiremock.card.CardDetails;
 import com.example.wiremock.payment.PaymentProcessorGateway;
 import com.example.wiremock.ticket.TicketBookingPaymentRequest;
-import com.example.wiremock.ticket.TicketBookingResponse;
 import com.example.wiremock.ticket.TicketBookingService;
 import com.github.tomakehurst.wiremock.WireMockServer;
-import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;
-import java.util.List;
 import java.util.Random;
-import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
 import static com.example.wiremock.ticket.TicketBookingResponse.BookingResponseStatus.SUCCESS;
@@ -79,7 +75,18 @@ public class TicketBookingServiceRequestNondeterministicStubbingTest {
 
         //verify
         verify(5,getRequestedFor(urlPathMatching("/fraudCheck/.*")));
-        verify(10,postRequestedFor(urlPathEqualTo("/payments")));
+
+        verify(10,postRequestedFor(urlPathEqualTo("/payments"))
+                        .withRequestBody(
+                                matchingJsonPath("cardNumber")
+                        )
+                        .withRequestBody(
+                                matchingJsonPath("cardExpiryDate ")
+                        )
+                        .withRequestBody(
+                                matchingJsonPath("cardNumber")
+                        )
+                );
     }
 
     private TicketBookingPaymentRequest generateBookingPayment(int i) {

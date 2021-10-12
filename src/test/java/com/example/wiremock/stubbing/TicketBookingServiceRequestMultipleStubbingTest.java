@@ -66,5 +66,15 @@ public class TicketBookingServiceRequestMultipleStubbingTest {
 
         assertThat(paymentUpdateResponse).isEqualTo(
                 new TicketBookingResponse("1111", "3333", SUCCESS));
+
+        verify(getRequestedFor(urlPathEqualTo("/fraudCheck/1111-1111-1111")));
+
+        verify(postRequestedFor(urlPathEqualTo("/payments"))
+                .withRequestBody(equalToJson("{\n" +
+                        "  \"cardNumber\": \"1111-1111-1111\",\n" +
+                        "  \"cardExpiryDate\": \"2021-10-11\",\n" +
+                        "  \"amount\": 200.0\n" +
+                        "}")
+                ));
     }
 }

@@ -47,5 +47,7 @@ public class TicketBookingServiceGeneralStubbingTest {
                 ticketBookingService.updatePaymentDetails(ticketBookingPaymentRequest);
 
         assertThat(paymentUpdateResponse.getStatus()).isEqualTo("SUCCESS");
+
+        verify(1, postRequestedFor(urlEqualTo("/update")));
     }
 }
