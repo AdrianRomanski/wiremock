@@ -1,0 +1,13 @@
+{
+  "request": {
+    "method": "GET",
+    "url": "/api/mytest"
+  },
+  "response": {
+    "status": 200,
+    "jsonBody": {
+      "message": "Hello World",
+      "paymentResponseStatus": "SUCCESS"
+    }
+  }
+}
